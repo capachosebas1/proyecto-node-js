@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-node",
+  "version": "1.0.0",
+  "description": "primer intento de proyecto de node js del curso ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capachosebas1/proyecto-node-js.git"
+  },
+  "author": "capachosebas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/capachosebas1/proyecto-node-js/issues"
+  },
+  "homepage": "https://github.com/capachosebas1/proyecto-node-js#readme"
+}
