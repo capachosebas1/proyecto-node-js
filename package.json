@@ -4,6 +4,7 @@
   "description": "primer intento de proyecto de node js del curso ",
   "main": "index.html",
   "scripts": {
+    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/capachosebas1/proyecto-node-js/issues"
   },
-  "homepage": "https://github.com/capachosebas1/proyecto-node-js#readme"
+  "homepage": "https://github.com/capachosebas1/proyecto-node-js#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
