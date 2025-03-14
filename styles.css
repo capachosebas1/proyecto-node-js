@@ -29,6 +29,25 @@
     transition: all 0.3s ease-in-out;
     flex: 1 150px;
     padding: 2px 5px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Todas las cards con la misma altura */
+    text-align: center;
+}
+
+.card img {
+    width: 100%; /* Todas las imágenes del mismo ancho */
+    height: 250px; /* Ajusta según el diseño deseado */
+    object-fit: contain;
+}
+
+.card-body {
+    flex-grow: 1; /* Hace que el contenido se distribuya equitativamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
