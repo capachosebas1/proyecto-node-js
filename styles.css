@@ -1,0 +1,91 @@
+/* 🎨 Estilos personalizados para el jumbotron */
+.jumbotron {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); /* Degradado mejorado */
+    color: white; /* Texto blanco */
+    padding: 60px 20px; /* Espaciado */
+    text-align: center; /* Centrar contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    animation: fadeIn 1s ease-in-out; /* Animación */
+}
+
+/* 📜 Estilo para el título dentro del jumbotron */
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🏨 Estilos para las tarjetas */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    flex: 1 150px;
+    padding: 2px 5px 2px 5px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* 🔘 Estilos para los botones */
+.btn-more {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+
+.btn-more:hover {
+    background-color: #008cff; /* Rojo más oscuro */
+    transform: scale(1.05); /* Ligero aumento */
+}
+
+.btn-more:active {
+    background-color: #ff5733 !important; /* Naranja */
+    transform: scale(0.95); /* Pequeño efecto de presión */
+    box-shadow: 0 0 10px rgba(255, 87, 51, 0.6); /* Brillo naranja */
+    border-color: #ff5733 !important;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.2rem;
+    }
+}
+
+/* 🔗 Estilos para el footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #f8b400; /* Amarillo */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff5733; /* Naranja */
+    text-decoration: underline;
+}
