@@ -1,0 +1,168 @@
+/* 🎨 Estilos personalizados para el jumbotron */
+.jumbotron {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); /* Degradado mejorado */
+    color: white; /* Texto blanco */
+    padding: 80px 20px; /* Espaciado mejorado */
+    text-align: center; /* Centrar contenido */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mejorada */
+    animation: fadeIn 1s ease-in-out; /* Animación */
+}
+
+/* 📜 Estilo para el título dentro del jumbotron */
+.jumbotron h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🏨 Estilos para las tarjetas */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    flex: 1 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Todas las cards con la misma altura */
+    text-align: center;
+    background: #ffffff;
+}
+
+.card img {
+    width: 100%; /* Todas las imágenes del mismo ancho */
+    height: 280px; /* Ajusta según el diseño deseado */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card-body {
+    flex-grow: 1; /* Hace que el contenido se distribuya equitativamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔘 Estilos para los botones */
+.btn-more {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    background-color: #d9534f;
+    border-color: #d9534f;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-more:hover {
+    background-color: #ff5733; /* Rojo más intenso */
+    transform: scale(1.05); /* Ligero aumento */
+}
+
+.btn-more:active {
+    background-color: #c0392b !important; /* Rojo oscuro */
+    transform: scale(0.95); /* Pequeño efecto de presión */
+    box-shadow: 0 0 12px rgba(255, 87, 51, 0.6); /* Brillo naranja */
+    border-color: #c0392b !important;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.2rem;
+    }
+
+    .card img {
+        height: 200px; /* Ajuste para pantallas pequeñas */
+    }
+}
+
+/* 🔗 Estilos para el footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #f8b400; /* Amarillo */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #ff5733; /* Naranja */
+    text-decoration: underline;
+}
+
+/* 📌 Estilos para la barra de navegación */
+.navbar {
+    background: #222;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f8b400;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* 🍞 Estilos para el breadcrumb */
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb a:hover {
+    color: #c0392b;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
