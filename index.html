@@ -12,9 +12,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Futbolistas Legendarios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                  <li class="nav-item"><a class="nav-link" href="jugadores.html">Jugadores</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Futbolistas</li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- Jumbotron con el título del proyecto -->
-    <div class="jumbotron text-white text-center p-5">
+    <div class="jumbotron text-white text-center p-5 bg-primary">
         <h1 class="display-4 fw-bold">Futbolistas Legendarios</h1>
         <p class="lead">Descubre los jugadores que marcaron historia en el fútbol</p>
     </div>
@@ -37,7 +64,7 @@
         </div>
     </div>
     
-    
+    <!-- Tarjetas de futbolistas -->
     <div class="container my-5">
         <div class="d-flex flex-wrap justify-content-center gap-4 my-5">
             <div class="card futbolista-card">
@@ -64,44 +91,42 @@
                     <a href="#" class="btn btn-primary btn-more">Ver más</a>
                 </div>
             </div> 
-          </div>
-        <div class="d-flex flex-wrap justify-content-center gap-4 my">
-          <div class="card futbolista-card">
-            <img src="img/cr7.jpeg" class="card-img-top" alt="CR7">
-            <div class="card-body text-center">
-                <h5 class="card-title fw-bold">Cristiano Ronaldo</h5>
-                <p class="card-text">Máximo goleador de la Champions League, una máquina de hacer goles.</p>
-                <a href="#" class="btn btn-primary btn-more">Ver más</a>
-            </div>
-          </div> 
-          <div class="card futbolista-card">
-            <img src="img/ronaldo.webp" class="card-img-top" alt="CR7">
-            <div class="card-body text-center">
-                <h5 class="card-title fw-bold">Ronaldo Nazario</h5>
-                <p class="card-text">Ganador de dos Balones de Oro y bicampeón del mundo con Brasil.</p>
-                <a href="#" class="btn btn-primary btn-more">Ver más</a>
-            </div>
-          </div> 
-          <div class="card futbolista-card">
-            <img src="img/cruyff.png" class="card-img-top" alt="CR7">
-            <div class="card-body text-center">
-                <h5 class="card-title fw-bold">Johan Cruyff</h5>
-                <p class="card-text">Revolucionó el fútbol con su visión táctica y su estilo de juego total.</p>
-                <a href="#" class="btn btn-primary btn-more">Ver más</a>
-            </div>
         </div>
+    <div class="d-flex flex-wrap justify-content-center gap-4 my">
+      <div class="card futbolista-card">
+        <img src="img/cr7.jpeg" class="card-img-top" alt="CR7">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Cristiano Ronaldo</h5>
+            <p class="card-text">Máximo goleador de la Champions League, una máquina de hacer goles.</p>
+            <a href="#" class="btn btn-primary btn-more">Ver más</a>
+        </div>
+      </div> 
+      <div class="card futbolista-card">
+        <img src="img/ronaldo.webp" class="card-img-top" alt="CR7">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Ronaldo Nazario</h5>
+            <p class="card-text">Ganador de dos Balones de Oro y bicampeón del mundo con Brasil.</p>
+            <a href="#" class="btn btn-primary btn-more">Ver más</a>
+        </div>
+      </div> 
+      <div class="card futbolista-card">
+        <img src="img/cruyff.png" class="card-img-top" alt="CR7">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Johan Cruyff</h5>
+            <p class="card-text">Revolucionó el fútbol con su visión táctica y su estilo de juego total.</p>
+            <a href="#" class="btn btn-primary btn-more">Ver más</a>
         </div>
     </div>
-    
-
-    <!-- Footer con alineación correcta -->
+    </div>
+    </div>
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-start">
                     <h5 class="fw-bold">Redes Sociales</h5>
-                    <a href="http://www.facebook.com" class="text-decoration-none text-warning d-block">Facebook</a>
-                    <a href="http://www.instagram.com" class="text-decoration-none text-warning d-block">Instagram</a>
+                    <a href="#" class="text-decoration-none text-warning d-block">Facebook</a>
+                    <a href="#" class="text-decoration-none text-warning d-block">Instagram</a>
                 </div>
                 <div class="col-md-4 text-center">
                     <h5 class="fw-bold">Contacto</h5>
@@ -124,6 +149,5 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
