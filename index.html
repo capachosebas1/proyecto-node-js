@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futbolistas</title>
+    <title>Futbolistas Legendarios</title>
 
     <!-- Bootstrap desde node_modules -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -21,105 +25,146 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
-                  <li class="nav-item"><a class="nav-link" href="jugadores.html">Jugadores</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-              </ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jugadores.html">Jugadores</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Jumbotron -->
+    <div class="jumbotron text-white text-center bg-primary">
+        <h1 class="display-4 fw-bold">Futbolistas Legendarios</h1>
+        <p class="lead">Descubre los jugadores que marcaron historia en el fútbol</p>
+    </div>
+
     <!-- Breadcrumb -->
-    <div class="container mt-3">
+    <div class="container mt-4 pt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Futbolistas</li>
-                <i class="bi bi-star-fill"></i>
+                <li class="breadcrumb-item"><a href="#">Inicio<i class="bi bi-star-fill ms-2 text-warning"></i></a></li>
             </ol>
         </nav>
     </div>
 
-    <!-- Jumbotron con el título del proyecto -->
-    <div class="jumbotron text-white text-center p-5 bg-primary">
-        <h1 class="display-4 fw-bold">Futbolistas Legendarios</h1>
-        <p class="lead">Descubre los jugadores que marcaron historia en el fútbol</p>
-    </div>
-    
-    <!-- Características principales -->
-    <div class="container mt-4">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h3 class="fw-bold">Habilidad Inigualable</h3>
-                <p>Jugadores con talento extraordinario y récords impresionantes.</p>
-            </div>
-            <div class="col-md-4">
-                <h3 class="fw-bold">Ídolos del Deporte</h3>
-                <p>Figuras que trascendieron generaciones con su pasión y entrega.</p>
-            </div>
-            <div class="col-md-4">
-                <h3 class="fw-bold">Legado Eterno</h3>
-                <p>Sus nombres quedarán grabados en la historia del fútbol para siempre.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Tarjetas de futbolistas -->
-    <div class="container my-5">
-        <div class="d-flex flex-wrap justify-content-center gap-4 my-5">
-            <div class="card futbolista-card">
-                <img src="img/maradona.png" class="card-img-top" alt="Maradona">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Diego Maradona</h5>
-                    <p class="card-text">Campeón del mundo con Argentina en 1986, un ícono del fútbol.</p>
-                    <a href="#" class="btn btn-primary btn-more">Ver más</a>
+    <main>
+        <!-- Características principales -->
+        <div class="container mt-4">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="fw-bold">Habilidad Inigualable</h3>
+                    <p>Jugadores con talento extraordinario y récords impresionantes.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">Ídolos del Deporte</h3>
+                    <p>Figuras que trascendieron generaciones con su pasión y entrega.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">Legado Eterno</h3>
+                    <p>Sus nombres quedarán grabados en la historia del fútbol para siempre.</p>
                 </div>
             </div>
-            <div class="card futbolista-card">
-                <img src="img/pele.png" class="card-img-top" alt="Pelé">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Pelé</h5>
-                    <p class="card-text">Tres veces campeón del mundo con Brasil, una leyenda viva.</p>
-                    <a href="#" class="btn btn-primary btn-more">Ver más</a>
+        </div>
+
+        <!-- Tarjetas de futbolistas -->
+        <div class="container my-5">
+            <div class="d-flex flex-wrap justify-content-center gap-4 my-5">
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Diego Maradona, leyenda argentina!">
+                    <img src="img/maradona.png" class="card-img-top img-fluid" alt="Diego Maradona">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Diego Maradona</h5>
+                        <p class="card-text">Campeón del mundo con Argentina en 1986, un ícono del fútbol.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                        
+                    </div>
+                </div>
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Pelé, el rey del fútbol!">
+                    <img src="img/pele.png" class="card-img-top img-fluid" alt="Pelé">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Pelé</h5>
+                        <p class="card-text">Tres veces campeón del mundo con Brasil, una leyenda viva.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                        
+                    </div>
+                </div>
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Messi, talento incomparable!">
+                    <img src="img/messi.jpg" class="card-img-top img-fluid" alt="Lionel Messi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Lionel Messi</h5>
+                        <p class="card-text">Balón de Oro múltiples veces y campeón del mundo con Argentina.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                        
+                    </div>
+                </div> 
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-4 my-5">
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Cristiano Ronaldo, imparable!">
+                    <img src="img/cr7.jpeg" class="card-img-top img-fluid" alt="Cristiano Ronaldo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Cristiano Ronaldo</h5>
+                        <p class="card-text">Máximo goleador de la Champions League, una máquina de hacer goles.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                        
+                    </div>
+                </div> 
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Ronaldo Nazario, el fenómeno!">
+                    <img src="img/ronaldo.webp" class="card-img-top img-fluid" alt="Ronaldo Nazario">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Ronaldo Nazario</h5>
+                        <p class="card-text">Ganador de dos Balones de Oro y bicampeón del mundo con Brasil.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                        
+                    </div>
+                </div> 
+                <div class="card futbolista-card" data-bs-toggle="tooltip" data-bs-placement="top" title="¡Johan Cruyff, genio del fútbol total!">
+                    <img src="img/cruyff.png" class="card-img-top img-fluid" alt="Johan Cruyff">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Johan Cruyff</h5>
+                        <p class="card-text">Revolucionó el fútbol con su visión táctica y su estilo de juego total.</p>
+                        <a href="#" class="btn btn-primary btn-more" data-bs-toggle="popover" title="¿Quieres saber más?" data-bs-content="Haz clic aquí para conocer más detalles sobre el jugador.">Ver más</a>
+                    </div>
                 </div>
             </div>
-            <div class="card futbolista-card">
-                <img src="img/messi.jpg" class="card-img-top" alt="Messi">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Lionel Messi</h5>
-                    <p class="card-text">Balón de Oro múltiples veces y campeón del mundo con Argentina.</p>
-                    <a href="#" class="btn btn-primary btn-more">Ver más</a>
+        </div>
+
+
+            <!-- Sección de Noticias -->
+        <div class="container text-center my-5">
+            <h2 class="fw-bold">Noticias del Mundo del Fútbol</h2>
+            <p>¡Mantente al día con las últimas noticias y rumores del fútbol! Suscríbete a nuestro boletín.</p>
+            <!-- Botón para abrir el modal -->
+            <button type="button" class="boton-custom" data-bs-toggle="modal" data-bs-target="#modalSuscripcion">
+                Suscríbete
+            </button>
+        </div>
+
+        <!-- Modal de Suscripción -->
+        <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-labelledby="modalSuscripcionLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSuscripcionLabel">Suscríbete a las Noticias</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <button type="submit" class="boton-custom">Suscribirse</button>
+                        </form>
+                    </div>
                 </div>
-            </div> 
+            </div>
         </div>
-    <div class="d-flex flex-wrap justify-content-center gap-4 my">
-      <div class="card futbolista-card">
-        <img src="img/cr7.jpeg" class="card-img-top" alt="CR7">
-        <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Cristiano Ronaldo</h5>
-            <p class="card-text">Máximo goleador de la Champions League, una máquina de hacer goles.</p>
-            <a href="#" class="btn btn-primary btn-more">Ver más</a>
-        </div>
-      </div> 
-      <div class="card futbolista-card">
-        <img src="img/ronaldo.webp" class="card-img-top" alt="CR7">
-        <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Ronaldo Nazario</h5>
-            <p class="card-text">Ganador de dos Balones de Oro y bicampeón del mundo con Brasil.</p>
-            <a href="#" class="btn btn-primary btn-more">Ver más</a>
-        </div>
-      </div> 
-      <div class="card futbolista-card">
-        <img src="img/cruyff.png" class="card-img-top" alt="CR7">
-        <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Johan Cruyff</h5>
-            <p class="card-text">Revolucionó el fútbol con su visión táctica y su estilo de juego total.</p>
-            <a href="#" class="btn btn-primary btn-more">Ver más</a>
-        </div>
-    </div>
-    </div>
-    </div>
+    </main>
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
@@ -150,5 +195,13 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function(){ 
+            $("[data-bs-toggle='tooltip']").tooltip();
+            $("[data-bs-toggle='popover']").popover();
+        });
+    </script>
+
 </body>
 </html>

@@ -23,6 +23,13 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+.jumbotron-costume {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* 🏨 Estilos para las tarjetas */
 .card {
     border-radius: 15px;
@@ -166,3 +173,92 @@ footer a:hover {
 .breadcrumb-item.active {
     color: #6c757d;
 }
+
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    color: #333;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #f8f9fa;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #e2e6ea;
+    color: #ff5733; /* Un tono rosado bonito al pasar el mouse */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ff5733; /* Color activo estilo tu "Ver más" */
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Contenido de los tabs */
+.tab-content {
+    margin-top: 30px;
+}
+
+/* Mejorar la tabla dentro del tab */
+.table {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.boton-custom {
+    color: #333;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #f8f9fa;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.boton-custom:hover {
+    background-color: #e2e6ea;
+    color: #ff5733;
+}
+
+.boton-custom.active {
+    background-color: #ff5733;
+    color: #fff;
+    font-weight: 700;
+}
+
+.carousel-item img {
+    width: 100%; /* Todas las imágenes del mismo ancho */
+    height: 280px; /* Ajusta según el diseño deseado */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+main {
+    flex: 1; /* ocupa todo el espacio disponible */
+  }
+  

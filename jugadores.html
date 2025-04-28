@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jugadores</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+     <!-- CSS personalizado -->
+     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Futbolistas Legendarios</a>
+            <a class="navbar-brand" href="#">Futbolistas Legendarios</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -17,21 +24,321 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="jugadores.html">Jugadores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jugadores.html">Jugadores</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-5 pt-5">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-white text-center bg-primary">
+        <h1 class="display-4 fw-bold">Futbolistas Legendarios</h1>
+        <p class="lead">Descubre las estadisticas de tus idolos</p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-4 pt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Jugadores</li>
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                    jugadores <i class="bi bi-star-fill ms-2 text-warning"></i>
+                </li>
             </ol>
         </nav>
-        <h1>Lista de Jugadores</h1>
-        <p>Contenido de prueba...</p>
     </div>
+
+    <main>
+        
+        <div class="container mt-5 pt-5">
+            <!-- Carrusel de Jugadores -->
+            <div id="jugadoresCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item ">
+                        <img src="img/cr7.jpeg" class="card-img-top img-fluid" alt="cr7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/cruyff.png" class="card-img-top img-fluid" alt="cruyff">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="img/maradona.png" class="card-img-top img-fluid" alt="maradona">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/messi.jpg" class="card-img-top img-fluid" alt="messi">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Pele.png" class="card-img-top img-fluid" alt="pele">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/ronaldo.webp" class="card-img-top img-fluid" alt="nazario">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#jugadoresCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#jugadoresCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div> 
+            <!-- Tabs de comparación -->
+            <ul class="nav nav-tabs" id="jugadoresTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="maradona-tab" data-bs-toggle="tab" data-bs-target="#maradona" type="button" role="tab" onclick="cambiarImagen('maradona')">Maradona</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pele-tab" data-bs-toggle="tab" data-bs-target="#pele" type="button" role="tab"  onclick="cambiarImagen('pele')">Pelé</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="messi-tab" data-bs-toggle="tab" data-bs-target="#messi" type="button" role="tab"  onclick="cambiarImagen('messi')">Messi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="cr7-tab" data-bs-toggle="tab" data-bs-target="#cr7" type="button" role="tab"  onclick="cambiarImagen('cr7')">Cristiano Ronaldo</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="cruyff-tab" data-bs-toggle="tab" data-bs-target="#cruyff" type="button" role="tab"  onclick="cambiarImagen('cruyff')">Cruyff</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="nazario-tab" data-bs-toggle="tab" data-bs-target="#nazario" type="button" role="tab"  onclick="cambiarImagen('nazario')">Nazario</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-6" id="jugadoresTabsContent">
+                <!-- Maradona -->
+                <div class="tab-pane fade show active" id="maradona" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Diego Armando Maradona</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Argentina</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>Copa del Mundo 1986</td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Mediapunta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pelé -->
+                <div class="tab-pane fade" id="pele" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Edson Arantes do Nascimento</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Brasil</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>Copas del Mundo 1958, 1962, 1970</td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Delantero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Messi -->
+                <div class="tab-pane fade" id="messi" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Lionel Andrés Messi Cuccittini</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Argentina</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>Copa América 2021, Copa del Mundo 2022</td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Delantero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cristiano Ronaldo -->
+                <div class="tab-pane fade" id="cr7" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Cristiano Ronaldo dos Santos Aveiro</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Portugal</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>Eurocopa 2016, Nations League 2019</td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Delantero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cruyff -->
+                <div class="tab-pane fade" id="cruyff" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Hendrik Johannes Cruijff</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Holanda</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>3 copas de europa (actual Champions league) seguidas (1971, 1972, 1973) </td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Mediapunta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Nazario -->
+                <div class="tab-pane fade" id="nazario" role="tabpanel">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre completo</td>
+                                <td>Ronaldo Luís Nazário de Lima</td>
+                            </tr>
+                            <tr>
+                                <td>País</td>
+                                <td>Brasil</td>
+                            </tr>
+                            <tr>
+                                <td>Títulos importantes</td>
+                                <td>Recopa de europa 1997, Copa de europa 1998, Campeon mundial 1994, 2002  </td>
+                            </tr>
+                            <tr>
+                                <td>Posición</td>
+                                <td>Delantero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-start">
+                    <h5 class="fw-bold">Redes Sociales</h5>
+                    <a href="#" class="text-decoration-none text-warning d-block">Facebook</a>
+                    <a href="#" class="text-decoration-none text-warning d-block">Instagram</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5 class="fw-bold">Contacto</h5>
+                    <address>
+                        <p class="mb-0">Fútbol Legends, Buenos Aires, Argentina</p>
+                        <p class="mb-0">+54 9 111 123 4567</p>
+                        <p class="mb-0">contacto@futbollegends.com</p>
+                    </address>
+                </div>
+                <div class="col-md-4 text-end">
+                    <h5 class="fw-bold">Enlaces</h5>
+                    <a href="#" class="text-decoration-none text-warning d-block">Nosotros</a>
+                    <a href="#" class="text-decoration-none text-warning d-block">Historia del Fútbol</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle desde node_modules -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function cambiarImagen(jugador) {
+            var carousel = document.getElementById('jugadoresCarousel');
+            var carouselInner = carousel.querySelector('.carousel-inner');
+            var imagenes = carouselInner.querySelectorAll('.carousel-item');
+
+            imagenes.forEach(function(item) {
+                var img = item.querySelector('img');
+                if (img && img.alt.toLowerCase() === jugador.toLowerCase()) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        var myCarousel = document.querySelector('#jugadoresCarousel');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 100000
+        });
+    </script>
 </body>
 </html>
